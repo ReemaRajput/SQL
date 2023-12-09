@@ -1,2 +1,2 @@
 # SQL
-All my Sql project will be uploaded here.
+All my Sql projects will be uploaded here.
