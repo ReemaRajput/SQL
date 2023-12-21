@@ -1,14 +1,14 @@
 Hard
 
-1) https://leetcode.com/problems/department-top-three-salaries/
-Concepts covered: Rank(),Dense_Rank(),Row_number()
-concept link: https://www.youtube.com/watch?v=PwYfGF07EfA&ab_channel=AshutoshKumar
-ref:https://www.youtube.com/watch?v=uzOtaRLNbkI&list=PLbTF1OfX62c3PHs8pANtRc9dSxu5Skdkp&index=1&ab_channel=AshutoshKumar
+1) Question: https://leetcode.com/problems/department-top-three-salaries/
 
 select Department, Employee, Salary from
 (select *, DENSE_RANK() OVER(PARTITION BY Department Order by Salary Desc)RNK from
 (select B.name Department, A.name Employee ,A.salary Salary from Employee A inner Join Department B on A.departmentId = B.id)c)d
 where RNK<4
 
-2)
+Concepts covered: Window Function- Rank(),Dense_Rank(),Row_number()
+concept link: https://www.youtube.com/watch?v=PwYfGF07EfA&ab_channel=AshutoshKumar
+ref:https://www.youtube.com/watch?v=uzOtaRLNbkI&list=PLbTF1OfX62c3PHs8pANtRc9dSxu5Skdkp&index=1&ab_channel=AshutoshKumar
+
 
