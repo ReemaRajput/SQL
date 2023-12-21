@@ -4,7 +4,7 @@ Hard
 Solution link: https://www.youtube.com/watch?v=uzOtaRLNbkI&list=PLbTF1OfX62c3PHs8pANtRc9dSxu5Skdkp&ab_channel=AshutoshKumar
 Concepts covered: Rank(),Dense_Rank(),Row_number()
 concept link: https://www.youtube.com/watch?v=PwYfGF07EfA&ab_channel=AshutoshKumar
-
+https://leetcode.com/problems/department-top-three-salaries/
 Solution:
 select Department, Employee, Salary from
 (select *, DENSE_RANK() OVER(PARTITION BY Department Order by Salary Desc)RNK from
