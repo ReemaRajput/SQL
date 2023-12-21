@@ -1,0 +1,17 @@
+Easy
+
+1) https://leetcode.com/problems/duplicate-emails/
+
+Solution:
+select Email from Person
+group by email having count(email)>1
+
+Concept: Group by & Having function
+
+2) https://leetcode.com/problems/customers-who-never-order/
+
+Solution:
+select name Customers from customers where name not in 
+(select a.name from customers a inner join orders b on a.id=b.customerid)
+
+ref: https://www.youtube.com/watch?v=LYDzMeoGVzo&list=PLbTF1OfX62c3PHs8pANtRc9dSxu5Skdkp&index=2&ab_channel=AshutoshKumar
