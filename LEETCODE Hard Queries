@@ -1,16 +1,15 @@
 Hard
 
-Q1. Department Top Three Salaries
-Question Link: https://leetcode.com/problems/department-top-three-salaries/
+1) Question Link: https://leetcode.com/problems/department-top-three-salaries/
+Solution link: https://www.youtube.com/watch?v=uzOtaRLNbkI&list=PLbTF1OfX62c3PHs8pANtRc9dSxu5Skdkp&ab_channel=AshutoshKumar
+Concepts covered: Rank(),Dense_Rank(),Row_number()
+concept link: https://www.youtube.com/watch?v=PwYfGF07EfA&ab_channel=AshutoshKumar
 
 Solution:
-
 select Department, Employee, Salary from
 (select *, DENSE_RANK() OVER(PARTITION BY Department Order by Salary Desc)RNK from
 (select B.name Department, A.name Employee ,A.salary Salary from Employee A inner Join Department B on A.departmentId = B.id)c)d
 where RNK<4
 
-Solution link: https://www.youtube.com/watch?v=uzOtaRLNbkI&list=PLbTF1OfX62c3PHs8pANtRc9dSxu5Skdkp&ab_channel=AshutoshKumar
+2)
 
-Concepts: Rank(),Dense_Rank(),Row_number()
-concept link: https://www.youtube.com/watch?v=PwYfGF07EfA&ab_channel=AshutoshKumar
