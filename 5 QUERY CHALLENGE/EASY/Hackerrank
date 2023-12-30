@@ -1,0 +1,21 @@
+
+1)https://www.hackerrank.com/challenges/weather-observation-station-6/problem?isFullScreen=true
+
+Solution:
+select distinct CITY
+from STATION
+where SUBSTR(CITY,1,1) IN('A','E','I','O','U');
+
+2)https://www.hackerrank.com/challenges/weather-observation-station-7/problem?isFullScreen=true
+
+Solution:
+select distinct CITY
+from STATION
+WHERE city like '%A' OR  city like '%E' OR  city like'%I' OR  city like'%O' OR  city like'%U'
+
+3)https://www.hackerrank.com/challenges/weather-observation-station-8/problem?isFullScreen=true
+
+Solution:
+SELECT DISTINCT city
+FROM   station
+WHERE  city RLIKE '^[aeiouAEIOU].*[aeiouAEIOU]$'
