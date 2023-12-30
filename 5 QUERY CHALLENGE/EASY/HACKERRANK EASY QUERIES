@@ -37,3 +37,9 @@ WHERE CITY NOT RLIKE '^[aeiouAEIOU]'
 Solution:
 SELECT DISTINCT CITY FROM STATION
 WHERE CITY NOT RLIKE '[aeiouAEIOU]$'
+
+6)https://www.hackerrank.com/challenges/weather-observation-station-11/problem?isFullScreen=true
+Solution:
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY NOT RLIKE '^[aeiouAEIOU]' OR CITY NOT RLIKE '[aeiouAEIOU]$'
