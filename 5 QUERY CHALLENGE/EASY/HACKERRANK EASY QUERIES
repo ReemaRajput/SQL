@@ -19,3 +19,21 @@ Solution:
 SELECT DISTINCT city
 FROM   station
 WHERE  city RLIKE '^[aeiouAEIOU].*[aeiouAEIOU]$'
+
+4) https://www.hackerrank.com/challenges/weather-observation-station-9/problem?isFullScreen=true
+
+Solution:
+SELECT DISTINCT CITY FROM STATION
+WHERE CITY NOT LIKE 'A%' AND CITY NOT LIKE 'E%' AND CITY NOT LIKE 'I%' AND CITY NOT LIKE 'O%' AND CITY NOT LIKE 'U%'    
+
+OR 
+
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY NOT RLIKE '^[aeiouAEIOU]'
+
+5)https://www.hackerrank.com/challenges/weather-observation-station-10/problem?isFullScreen=true
+
+Solution:
+SELECT DISTINCT CITY FROM STATION
+WHERE CITY NOT RLIKE '[aeiouAEIOU]$'
